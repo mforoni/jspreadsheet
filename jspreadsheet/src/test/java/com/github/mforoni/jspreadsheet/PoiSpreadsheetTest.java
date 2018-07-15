@@ -59,9 +59,9 @@ public class PoiSpreadsheetTest {
     Files.deleteIfExists(CREATE_XLSX_PATH);
     try (final PoiSpreadsheet spreadsheet = PoiSpreadsheet.create(CREATE_XLSX_PATH.toFile())) {
       assertNotNull(spreadsheet);
-      spreadsheet.write();
     }
-    assertTrue(CREATE_XLSX_PATH.toFile().exists());
+		com.google.common.io.Files.createParentDirs(CREATE_XLSX_PATH.toFile());
+    Files.createFile(CREATE_XLSX_PATH);
     try (final PoiSpreadsheet spreadsheet = PoiSpreadsheet.create(CREATE_XLSX_PATH.toFile())) {
       fail("Exception is expected");
     } catch(IllegalStateException e) {

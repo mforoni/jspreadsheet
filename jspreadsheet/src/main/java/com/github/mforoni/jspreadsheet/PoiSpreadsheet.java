@@ -58,7 +58,7 @@ final class PoiSpreadsheet implements Spreadsheet {
           throw new IllegalStateException(String.format(
               "Cannot create file %s: the file already exist", file));
         }
-        Files.createFile(file.toPath());
+        com.google.common.io.Files.createParentDirs(file);
         workbook = Spreadsheets.isExtensionXlsx(file) ? new XSSFWorkbook() : new HSSFWorkbook();
         break;
       default:
