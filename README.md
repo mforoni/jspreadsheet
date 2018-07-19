@@ -1,3 +1,6 @@
+[![build_status](https://travis-ci.org/mforoni/jspreadsheet.svg?branch=master)](https://travis-ci.org/mforoni/jspreadsheet)
+[![Release](https://jitpack.io/v/com.github.mforoni/jspreadsheet.svg)](https://jitpack.io/#com.github.mforoni/jspreadsheet)
+
 # JSpreadsheet
 
 Provides intuitive Java APIs to manipulate spreadsheets in the ODS and Microsoft Excel formats
@@ -35,7 +38,7 @@ it can easily be overcome just by following these two steps:
 
 ```xml
 <dependency>
-  <groupId>com.github.mforoni</groupId>
+  <groupId>com.github.mforoni.jspreadsheet</groupId>
   <artifactId>jspreadsheet</artifactId>
   <version>master-SNAPSHOT</version>
 </dependency>
@@ -52,7 +55,7 @@ allprojects {
 }
 
 dependencies {
-  implementation 'com.github.mforoni:jspreadsheet:master-SNAPSHOT'
+  implementation 'com.github.mforoni.jspreadsheet:jspreadsheet:master-SNAPSHOT'
 }
 ```
 
