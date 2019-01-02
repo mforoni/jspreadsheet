@@ -118,7 +118,7 @@ final class OdsSheet extends AbstractSheet {
       final Object value = getImmutableCell(rowIndex, columnIndex).getValue();
       Preconditions.checkArgument(value instanceof BigDecimal);
       final BigDecimal bd = (BigDecimal) value;
-      return bd != null ? bd.doubleValue() : null; // never null?
+      return bd.doubleValue();
     } else {
       throw new IllegalStateException(
           "Cannot retrieve a Double from a cell not having type FLOAT, CURRENCY or PERCENTAGE");
